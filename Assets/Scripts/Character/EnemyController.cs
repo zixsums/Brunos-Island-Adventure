@@ -50,6 +50,12 @@ namespace RPG.Character
 
             healthCmp.healthPoints = stats.health;
             combatCmp.damage = stats.damage;
+
+            if (healthCmp.sliderCmp != null)
+            {
+                healthCmp.sliderCmp.maxValue = stats.health;
+                healthCmp.sliderCmp.value = stats.health;
+            }
         }
 
         private void OnEnable()
